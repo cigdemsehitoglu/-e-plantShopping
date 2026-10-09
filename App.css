@@ -1,0 +1,114 @@
+/* Landing page background image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://cdn.pixabay.com/photo/2016/11/21/16/05/plants-1845814_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  z-index: -1;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.landing-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.landing-page.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  z-index: 1;
+}
+
+.landing_content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.landing_content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.landing_content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.divider {
+  height: 3px;
+  width: 80px;
+  background-color: #4caf50;
+  margin: 15px auto;
+}
+
+.get-started-button {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.get-started-button:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+.aboutus_container {
+  max-width: 500px;
+}
+
+.product-list-container {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.product-list-container.visible {
+  display: block;
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .landing_content h1 {
+    font-size: 2rem;
+  }
+}

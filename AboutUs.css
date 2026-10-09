@@ -1,0 +1,23 @@
+.about-us-container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.about-us-description {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1b5e20;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-us-content {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
